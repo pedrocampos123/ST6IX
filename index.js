@@ -26,7 +26,7 @@ client.on("message", async message => {
         break;
         case "information":
             const embed = new discord.RichEmbed()
-                .setAuthor(`ST6IX | 響`, client.user.avatarURL)
+                .setAuthor(`ST6IX`, client.user.avatarURL)
                 .addField(`User`, `${usuario.username}`, true)
                 .addField(`Servers`, `${client.guilds.size}`, true)
                 .addField(`Users`, `${client.users.size}`, true)
