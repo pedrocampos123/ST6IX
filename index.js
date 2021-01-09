@@ -9,11 +9,11 @@ client.on("ready", () => {
     client.user.setActivity("Bot Oficial ST6IX");
 });
 
-/*client.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
     //var canal = client.channels.find(channels => channels.id === ("432763750316113932"));
-    var canal = client.channels.find(channels => channels.id === (config.idSala));
-    canal.send0("Bienvenido/a <@" + member.id + "> :smiley: :smiley:");
-});*/
+    var canal = client.channels.find(channel => channel.id === (config.idSala));
+    canal.send("Bienvenido/a <@" + member.id + "> :smiley: :smiley:");
+});
 
 client.on("message", async message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
