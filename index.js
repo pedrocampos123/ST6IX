@@ -11,7 +11,7 @@ client.on("ready", () => {
 
 client.on("guildMemberAdd", member => {
     var canal = client.channels.find(channels => channels.id === ("432763750316113932"));
-    canal.send0("Bienvenido <@" + member.id + "> :smiley: :smiley:");
+    canal.send0("Bienvenido/a <@" + member.id + "> :smiley: :smiley:");
 });
 
 client.on("message", async message => {
