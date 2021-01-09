@@ -10,7 +10,8 @@ client.on("ready", () => {
 });
 
 client.on('guildMemberAdd', member => {
-    member.guild.channels.get('569335031000989724').send(`**¡Hola <@` + member.user.id + `>!`);
+    //member.guild.channels.get('569335031000989724').send(`**¡Hola <@` + member.user.id + `>!`);
+    member.guild.defaultChannel.send(`Welcome to the server, ${member}!`);
 });
 
 /*client.on("guildMemberAdd", member => {
