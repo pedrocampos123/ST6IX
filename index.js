@@ -1,15 +1,16 @@
 const discord = require("discord.js");
-const client = new Discord.Client();
+const client = new discord.Client();
 const config = require("./config.json");
 
 var prefix = config.prefix;
 
 client.on("ready", () => {
     console.log(`${client.user.username} se a conectado correctamente`);
-    client.user.setActivity("Bot Oficial ST6IX");
+    client.user.setActivity("Bot Oficial -ST6IX-");
 });
 
 client.on("guildMemberAdd", member => {
+    //var canal = client.channels.find(channel => channel.id === ("432763750316113932"));
     var Canal = client.channels.find(channel => channel.id === ("569335031000989724"));
     Canal.send("Bienvenido/a <@" + member.id + "> :smiley: :smiley:");
 });
