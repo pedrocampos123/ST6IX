@@ -10,7 +10,8 @@ client.on("ready", () => {
 });
 
 client.on("guildMemberAdd", member => {
-    var canal = client.channels.find(channels => channels.id === ("432763750316113932"));
+    //var canal = client.channels.find(channels => channels.id === ("432763750316113932"));
+    var canal = client.channels.find(channels => channels.id === (config.idSala));
     canal.send0("Bienvenido/a <@" + member.id + "> :smiley: :smiley:");
 });
 
