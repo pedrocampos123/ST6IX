@@ -6,7 +6,7 @@ var prefix = config.prefix;
 
 client.on("ready", () => {
     console.log(`${client.user.username} se a conectado correctamente`);
-    client.user.setActivity("Bot Oficial -ST6IX-");
+    client.user.setActivity("Bot Oficial ST6IX");
 });
 
 client.on("guildMemberAdd", member => {
