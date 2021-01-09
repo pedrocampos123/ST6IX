@@ -9,6 +9,11 @@ client.on("ready", () => {
     client.user.setActivity("Bot Oficial ST6IX");
 });
 
+client.on("guildMemberAdd", member => {
+    var canal = client.channels.find(channels => channels.id === ("432763750316113932"));
+    canal.send0("Bienvenido <@" + member.id + "> :smiley: :smiley:");
+});
+
 client.on("message", async message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -17,13 +22,13 @@ client.on("message", async message => {
 
     let usuario = message.author;
 
-    switch(command){
-        case "saludo": 
+    switch (command) {
+        case "saludo":
             return message.channel.send(`Hola ${usuario.username}`);
-        break;
-        case "helpbot": 
+            break;
+        case "helpbot":
             return message.channel.send("!saludo\n!information");
-        break;
+            break;
         case "information":
             const embed = new discord.RichEmbed()
                 .setAuthor(`ST6IX`, client.user.avatarURL)
@@ -38,10 +43,10 @@ client.on("message", async message => {
                 .setTimestamp()
                 .setColor("RANDOM");
             message.channel.send(embed);
-        break;
+            break;
         default:
             return message.channel.send("comando invalido, utilizar el comando !helpbot");
-        break;
+            break;
     }
 })
 
