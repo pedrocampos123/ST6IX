@@ -9,8 +9,9 @@ client.on("ready", () => {
     client.user.setActivity("Bot Oficial -ST6IX-");
 });
 
-client.on('guildMemberAdd', member => {
-    member.guild.channels.get('569335031000989724').send(`**¡Hola <@` + member.user.id + `>!** Bienvenido a **` + serverName + `**, recuerda leer las <#719847936896401472>, <#718081678765195366> y <#717823857179885721>, ¡Disfruta!.`);
+bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('569335031000989724')
+        .send(`**¡Hola <@` + member.user.id + `>!`);
 });
 
 /*client.on("guildMemberAdd", member => {
