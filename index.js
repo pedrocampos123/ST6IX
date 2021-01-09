@@ -1,5 +1,5 @@
-const discord = require("discord.js");
-const client = new discord.Client();
+const Discord = require("discord.js");
+const client = new Discord.Client();
 const config = require("./config.json");
 
 var prefix = config.prefix;
@@ -11,7 +11,8 @@ client.on("ready", () => {
 
 client.on('guildMemberAdd', member => {
     //member.guild.channels.get('569335031000989724').send(`**¡Hola <@` + member.user.id + `>!`);
-    member.guild.defaultChannel.send(`Welcome to the server, ${member}!`);
+    //member.guild.defaultChannel.send(`Welcome to the server, ${member}!`);
+    member.owner.send("Hello, thanks for adding me to " + member.name + "!");
 });
 
 /*client.on("guildMemberAdd", member => {
