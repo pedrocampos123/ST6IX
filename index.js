@@ -10,7 +10,7 @@ client.on("ready", () => {
 });
 
 bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('569335031000989724')
+    member.guild.channels.get('568592288075218956/569335031000989724')
         .send(`**¡Hola <@` + member.user.id + `>!`);
 });
 
