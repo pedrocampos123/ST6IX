@@ -12,7 +12,6 @@ client.on("ready", () => {
 client.on("guildMemberAdd", member => {
     //var canal = client.channels.find(channel => channel.id === ("432763750316113932"));
     var Canal = client.channels.find(channel => channel.id === ("569335031000989724"));
-    message.channel.send(`Hola ${usuario.username}`);
     Canal.send("Bienvenido/a <@" + member.id + "> :smiley: :smiley:");
 });
 
