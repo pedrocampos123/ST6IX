@@ -10,9 +10,9 @@ client.on("ready", () => {
 });
 
 client.on("guildMemberAdd", member => {
-    var Canal = client.channels.find(channel => channel.id == ("569335031000989724"));
+    var Canal = client.channels.find(channel => channel.id === ("569335031000989724"));
     //Canal.send("Bienvenido/a <@" + member.id + "> :smiley: :smiley:");
-    console.log(`Bienvenido/a ${client.user.username}`);
+    Canal.send(`Bienvenido/a ${client.user.username}`);
 });
 
 client.on("message", async message => {
