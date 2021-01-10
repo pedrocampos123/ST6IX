@@ -9,17 +9,10 @@ client.on("ready", () => {
     client.user.setActivity("Bot Oficial -ST6IX-");
 });
 
-client.on('guildMemberAdd', member => {
-    //member.guild.channels.get('569335031000989724').send(`**¡Hola <@` + member.user.id + `>!`);
-    //member.guild.defaultChannel.send(`Welcome to the server, ${member}!`);
-    member.owner.send("Hello, thanks for adding me to " + member.name + "!");
-});
-
-/*client.on("guildMemberAdd", member => {
-    //var canal = client.channels.find(channel => channel.id === ("432763750316113932"));
-    var Canal = client.channels.find(channel => channel.id === ("569335031000989724"));
+client.on("guildMemberAdd", member => {
+    var Canal = client.channels.find(channel => channel.id == ("569335031000989724"));
     Canal.send("Bienvenido/a <@" + member.id + "> :smiley: :smiley:");
-});*/
+});
 
 client.on("message", async message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
