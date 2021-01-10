@@ -37,7 +37,7 @@ client.on("message", async message => {
             return message.channel.send("!saludo\n!information");
             break;
         case "information":
-            const embed = new discord.RichEmbed()
+            const embed = new Discord.RichEmbed()
                 .setAuthor(`ST6IX`, client.user.avatarURL)
                 .addField(`User`, `${usuario.username}`, true)
                 .addField(`Servers`, `${client.guilds.size}`, true)
