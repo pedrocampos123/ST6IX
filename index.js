@@ -10,8 +10,9 @@ client.on("ready", () => {
 });
 
 client.on("guildMemberAdd", member => {
-    member.guild.channels.cache.get(channel => channel.id === ("569335031000989724"));
-    member.guild.defaultChannel.send(`Bienvenido/a ${client.user.username}`);
+    /*member.guild.channels.cache.get(channel => channel.id === ("569335031000989724"));
+    member.guild.defaultChannel.send(`Bienvenido/a ${client.user.username}`);*/
+    client.guild.channel.cache.get(channel => channel.id === ("569335031000989724")).send(`Bienvenido/a`)
 });
 
 client.on("message", async message => {
