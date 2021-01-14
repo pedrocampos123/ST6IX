@@ -12,7 +12,10 @@ client.on("ready", () => {
 client.on("guildMemberAdd", (member) => {
     try {
         let canal = client.channels.cache.get('432763750316113932');
-        canal.send(`Hey ${member.user.username}, welcome to ${client.user.username} :tada::hugging:`);
+
+        if (canal != null) {
+            canal.send(`Hey ${member.user.username}, welcome to ${client.user.username} :tada::hugging:`);
+        }
     } catch (error) {}
 });
 
