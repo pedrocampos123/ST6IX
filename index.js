@@ -10,11 +10,10 @@ client.on("ready", () => {
 });
 
 client.on("guildMemberAdd", (member) => {
-    let canal = client.channels.cache.get('569335031000989724');
-    canal.send(`Welcome ${member.user} :|`);
-    /*member.guild.channels.cache.get(channel => channel.id === ("569335031000989724"));
-    member.guild.defaultChannel.send(`Bienvenido/a ${client.user.username}`);*/
-    //client.guild.channel.cache.get(channel => channel.id === ("569335031000989724")).send(`Bienvenido/a`)
+    try {
+        let canal = client.channels.cache.get('432763750316113932');
+        canal.send(`Hey ${member.user.username}, welcome to ${client.user.username} :tada::hugging:`);
+    } catch (error) {}
 });
 
 client.on("message", async message => {
