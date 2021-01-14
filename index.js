@@ -9,7 +9,7 @@ client.on("ready", () => {
     client.user.setActivity("Bot Oficial -ST6IX-");
 });
 
-client.on("guildMemberAdd", (member) => {
+/*client.on("guildMemberAdd", (member) => {
     try {
         let canal = client.channels.cache.get('432763750316113932');
 
@@ -17,7 +17,7 @@ client.on("guildMemberAdd", (member) => {
             canal.send(`Hey ${member.user.username}, welcome to ${client.user.username} :tada::hugging:`);
         }
     } catch (error) {}
-});
+});*/
 
 client.on("message", async message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
