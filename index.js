@@ -5,8 +5,13 @@ const config = require("./config.json");
 var prefix = config.prefix;
 
 client.on("ready", () => {
-    console.log(`${client.user.username} conectado correctamente :V`);
-    client.user.setActivity("Jugando con amigos");
+    try {
+        console.log(`${client.user.username} conectado correctamente :V`);
+        client.user.setActivity("Jugando con amigos");
+
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 client.on("guildMemberAdd", (member) => {
@@ -17,7 +22,9 @@ client.on("guildMemberAdd", (member) => {
         if (!canal) return;
 
         canal.send(`Hey **${member.user.username}**, welcome to ${client.user.username} :tada::hugging:`);
-    } catch (error) {}
+    } catch (error) {
+        console.log(error);
+    }
 });
 
 client.on("message", async message => {
