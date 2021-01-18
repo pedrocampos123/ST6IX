@@ -16,7 +16,8 @@ client.on("ready", () => {
 
 client.on("guildMemberAdd", (member) => {
     try {
-        let canal = client.channels.cache.get('800595800799313981');
+        //let canal = client.channels.cache.get('800595800799313981');
+        const canal = client.channels.cache.find(canal => canal.name === "lobby");
         //const canal = member.channels.cache.find(canal => canal.name === "lobby");
 
         if (!canal) return;
@@ -38,26 +39,26 @@ client.on("message", async message => {
 
         switch (command) {
             case "saludo":
-                return message.channel.send(`Hola ${usuario.username}`);
+                return message.channel.send(`Hola **${usuario.username}**`);
                 break;
             case "helpbot":
                 return message.channel.send("!saludo\n!information");
                 break;
-            case "information":
-                const embed = new Discord.RichEmbed()
-                    .setAuthor(`ST6IX`, client.user.avatarURL)
-                    .addField(`User`, `${usuario.username}`, true)
-                    .addField(`Servers`, `${client.guilds.size}`, true)
-                    .addField(`Users`, `${client.users.size}`, true)
-                    .addField(`Discord`, `[ST6IX/discord](https://discord.gg/hKa8HrEH)`, true)
-                    .addField(`Invite`, `[ST6IX/discord](https://discord.gg/hKa8HrEH)`, true)
-                    .addField(`Developer`, `ARTURO_#1583`, true)
-                    .addField(`YouTube`, "https://www.youtube.com/channel/UCBqpmuhsKpwh8IX-ge6kCbQ", true)
-                    .addField(`Version`, `1.0`, true)
-                    .setTimestamp()
-                    .setColor("RANDOM");
-                message.channel.send(embed);
-                break;
+                /*case "information":
+                    const embed = new Discord.RichEmbed()
+                        .setAuthor(`ST6IX`, client.user.avatarURL)
+                        .addField(`User`, `${usuario.username}`, true)
+                        .addField(`Servers`, `${client.guilds.size}`, true)
+                        .addField(`Users`, `${client.users.size}`, true)
+                        .addField(`Discord`, `[ST6IX/discord](https://discord.gg/hKa8HrEH)`, true)
+                        .addField(`Invite`, `[ST6IX/discord](https://discord.gg/hKa8HrEH)`, true)
+                        .addField(`Developer`, `ARTURO_#1583`, true)
+                        .addField(`YouTube`, "https://www.youtube.com/channel/UCBqpmuhsKpwh8IX-ge6kCbQ", true)
+                        .addField(`Version`, `1.0`, true)
+                        .setTimestamp()
+                        .setColor("RANDOM");
+                    message.channel.send(embed);
+                    break;*/
             default:
                 return message.channel.send("comando invalido, utilizar el comando !helpbot");
                 break;
