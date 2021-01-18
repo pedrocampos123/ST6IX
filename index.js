@@ -17,8 +17,9 @@ client.on("ready", () => {
 client.on("guildMemberAdd", (member) => {
     try {
         //let canal = client.channels.cache.get('800595800799313981');
-        const canal = client.channels.cache.find(canal => canal.name === "lobby");
+        const canal = client.channels.cache.find(canal => canal.name == "lobby");
         //const canal = member.channels.cache.find(canal => canal.name === "lobby");
+        console.log(canal.name);
 
         if (!canal) return;
 
