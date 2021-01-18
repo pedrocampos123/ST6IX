@@ -16,8 +16,8 @@ client.on("ready", () => {
 
 client.on("guildMemberAdd", (member) => {
     try {
-        //let canal = client.channels.cache.get('432763750316113932');
-        const canal = member.channels.cache.find(canal => canal.name === "lobby");
+        let canal = client.channels.cache.get('800595800799313981');
+        //const canal = member.channels.cache.find(canal => canal.name === "lobby");
 
         if (!canal) return;
 
@@ -27,7 +27,7 @@ client.on("guildMemberAdd", (member) => {
     }
 });
 
-/*sclient.on("message", async message => {
+client.on("message", async message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     try {
 
@@ -66,6 +66,6 @@ client.on("guildMemberAdd", (member) => {
     } catch (error) {
         console.log(error);
     }
-});*/
+});
 
 client.login(config.token);
