@@ -27,7 +27,7 @@ client.on("guildMemberAdd", (member) => {
     }
 });
 
-client.on("message", async message => {
+/*client.on("message", async message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     try {
 
@@ -66,6 +66,6 @@ client.on("message", async message => {
     } catch (error) {
         console.log(error);
     }
-});
+});*/
 
 client.login(process.env.token);
