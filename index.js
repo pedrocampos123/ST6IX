@@ -21,7 +21,7 @@ client.on("guildMemberAdd", (member) => {
 
         if (!canal) return;
 
-        canal.send(`Hey **${member.user.username}**, welcome to ${client.user.username} :tada::hugging:`);
+        canal.send(`Hey **${member}**, welcome to ${member.guild} :tada::hugging:`);
     } catch (error) {
         console.log(error);
     }
