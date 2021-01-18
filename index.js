@@ -27,7 +27,7 @@ client.on("guildMemberAdd", (member) => {
     }
 });
 
-/*client.on("message", async message => {
+/*sclient.on("message", async message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     try {
 
@@ -68,4 +68,4 @@ client.on("guildMemberAdd", (member) => {
     }
 });*/
 
-client.login(process.env.token);
+client.login(config.token);
