@@ -62,8 +62,9 @@ client.on("message", async message => {
                     message.channel.send(embed);
                     break;*/
             default:
-                return message.channel.send("comando invalido, utilizar el comando !helpbot");
-                break;
+				return;
+                //return message.channel.send("comando invalido, utilizar el comando !helpbot");
+			break;
         }
 
     } catch (error) {
